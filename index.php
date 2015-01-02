@@ -5,13 +5,28 @@
 $kingOfPop = "Erwann";
 
 //Quelle plateforme?
-$coolTool = "pc";//"mac" ou "pc"
+$coolTool = "win";//"mac" , "win" ou linux
 
 
 // repertoires  gnorer dans les projets
 $projectsListIgnore = array ('.','..');
 
+// changements selon plateform
 
+switch($coolTool){
+	case "win":
+		$initial = "W";
+		$phpMyAdmin = "";
+		break;
+	case "mac":
+		$initial = "M";
+		$phpMyAdmin = "";
+		break;
+	case 'linux':
+		$initial = "L";
+		$phpMyAdmin = "";
+		break;
+}
 
 
 
@@ -68,7 +83,17 @@ closedir($handle);
   }
 }
 */
- 
+ .clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clearfix {display: block;}
+html[xmlns] .clearfix {display: block;}
+* html .clearfix {height: 1%;}
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
@@ -132,22 +157,32 @@ closedir($handle);
                 margin : 2em auto;
                 width :90%;
                 max-width:960px;
-                padding : 1em 1%;
+
             }
             
-            .wrap{
-                background: #fff;
-            }
 
+			section.wrap article{
+				padding : 1em 1%;
+				width: 	25%;
+				margin:  0 ;
+				float : left;
+				background: #fff;
+			}
+
+			section.wrap article:first-of-type{
+				width: 	74%;
+				margin-right : 1%;
+			}
             a, a *{
                 -webkit-transition: all 100ms ease-out;
                 -moz-transition: all 100ms ease-out;
                 -ms-transition: all 100ms ease-out;
                 -o-transition: all 100ms ease-out;
                 transition: all 100ms ease-out;}
-            #siteList ul , .extWeb   ul    {list-style-type : none;}
-            #siteList a         {text-decoration: none; font-size:1.5em; color : #666}
-            #siteList a:hover   {text-decoration: none; color : #c68103}
+            #siteList ul , .extWeb   ul , #toolsList ul   {list-style-type : none;}
+            #siteList a    {text-decoration: none; font-size:1.5em; color : #666}
+            #toolsList a   {text-decoration: none; font-size:1em; color : #666}
+            #siteList a:hover  , #toolsList a:hover {text-decoration: none; color : #c68103}
             
             
             
@@ -158,22 +193,34 @@ closedir($handle);
             
             #footerSite{
                 text-align : right;
+				background: #fff;
+				padding: .2em 1%;
             }
         </style>
     </head>
+
+
+
+
+
+
+
+
     <body>
+
        
        <header class="wrapT" id="headerSite">
            <h1><img src="data:image/png;base64,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" alt="CEFIM" />
            <br>
-           Serveur <?=  $coolTool=="mac" ? 'M' : 'W';  ?>AMP Perso de <?= $kingOfPop ?>
+           Serveur <?= $initial ?>AMP Perso de <?= $kingOfPop ?>
            </h1>
            
 
+
            
        </header>
-       
-        <article class="wrap">
+       <section class="wrap clearfix">
+         <article>
            
            
             <h1>Projets Web</h1>
@@ -183,6 +230,19 @@ closedir($handle);
                 </ul> 
             </nav>
         </article>
+
+        <article>
+        	<h1>Outils</h1>
+        	<nav id="toolsList">
+        		<ul>
+        			<li><a href="?phpinfo=1"><i class="icon-info"></i> PhPInfo</a></li>
+        			<li><a href="<?= $phpMyAdminLink ?>"><i class="icon-database"></i> PhPMyAdmin</a></li>
+        			<!-- Image lamp <li><a href=""><i class="icon-cog"></i> WebMin</a></li> -->
+        		</ul>
+        	</nav>
+        </article>
+       </section>
+
 <!-- TRAVAUX FUTURS SUR PAGE D'ACCUEIL : Cadre d'utils serveur 
        -PhPinfo()
        -PhPMyAdmin        
@@ -194,12 +254,11 @@ closedir($handle);
         </div>
 -->
    <footer class='wrapT' id="footerSite">
-                  <nav class="extWeb">
-               <ul>
-                   <li><a href="//cefim.eu" title="CEFIM"><i class="icon-globe" ></i></a></li>
-                   <li><a href="//plus.google.com/u/0/communities/115473612304968181395" title="Communauté Google + DL et CDI"><i class="icon-gplus"></i></a></li>
-               </ul>
-           </nav>
+	<a href="//cefim.eu" title="CEFIM">CEFIM</a>
+	-
+    <a href="//plus.google.com/u/0/communities/115473612304968181395" title="Communauté Google + DL et CDI">Communauté DL_CDI</a>
+	-
+	<a href="//">Source sur GitHub</a>
    </footer>
     </body>
 </html>
