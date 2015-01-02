@@ -13,6 +13,14 @@ $projectsListIgnore = array ('.','..');
 
 // changements selon plateform
 
+
+if(isset($_GET["phpinfo"])){
+	echo "<a href='index.php'>retour</a>";
+	phpinfo();
+	echo "<a href='index.php'>retour</a>";
+}else{
+
+
 switch($coolTool){
 	case "win":
 		$initial = "W";
@@ -196,6 +204,9 @@ html[xmlns] .clearfix {display: block;}
 				background: #fff;
 				padding: .2em 1%;
             }
+			
+			#footerSite a{ font-size : 1em;color : black; }
+			#footerSite a:hover{color : #c68103;}
         </style>
     </head>
 
@@ -256,9 +267,12 @@ html[xmlns] .clearfix {display: block;}
    <footer class='wrapT' id="footerSite">
 	<a href="//cefim.eu" title="CEFIM">CEFIM</a>
 	-
-    <a href="//plus.google.com/u/0/communities/115473612304968181395" title="Communauté Google + DL et CDI">Communauté DL_CDI</a>
+    <a href="//plus.google.com/u/0/communities/115473612304968181395" title="Communauté Google + DL et CDI">Communauté g+ DL_CDI</a>
+    -
+    <a href="//plus.google.com/communities/103916411774981184150" title="Communauté Google + DL et CDI">Communauté g+ IMM</a>
 	-
-	<a href="//">Source sur GitHub</a>
+	<a href="//github.com/ejallier/local-amp-homepage">Source sur GitHub</a>
    </footer>
     </body>
 </html>
+<?php } ?>
