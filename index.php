@@ -1,5 +1,6 @@
 <?php
 
+
 //Qui c'est ?
 $kingOfPop = "Erwann";
 
@@ -43,15 +44,7 @@ closedir($handle);
         <!-- <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'> -->
         <meta charset="utf-8">
         <style>
-            
-            @font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?15772790');
-  src: url('../font/fontello.eot?15772790#iefix') format('embedded-opentype'),
-       url('../font/fontello.svg?15772790#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+
 @font-face {
   font-family: 'fontello';
   src: url('data:application/octet-stream;base64,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') format('woff'),
@@ -116,17 +109,39 @@ closedir($handle);
 .icon-home:before { content: '\e80f'; } /* '' */
 .icon-cloud:before { content: '\e810'; } /* '' */
             
-            body{
-                background: #eee;
-                /* font-family: 'Shadows Into Light', tahoma; */
-                font-family: roboto, tahoma;
-            }
+
+			 .clearfix:after {
+				 content: ".";
+				 display: block;
+				 clear: both;
+				 visibility: hidden;
+				 line-height: 0;
+				 height: 0;
+			}
+			.clearfix {display: block;}
+			html[xmlns] .clearfix {display: block;}
+			* html .clearfix {height: 1%;}
+						@font-face {
+			  font-family: 'fontello';
+			  src: url('../font/fontello.eot?15772790');
+			  src: url('../font/fontello.eot?15772790#iefix') format('embedded-opentype'),
+				   url('../font/fontello.svg?15772790#fontello') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			}
             html {
             box-sizing: border-box;
             }
             *, *:before, *:after {
               box-sizing: inherit;
             }
+
+            body{
+                background: #eee;
+                /* font-family: 'Shadows Into Light', tahoma; */
+                font-family: roboto, tahoma;
+            }
+
             .wrap, .wrapT{
                 margin : 2em auto;
                 width :90%;
@@ -134,9 +149,7 @@ closedir($handle);
                 padding : 1em 1%;
             }
             
-            .wrap{
-                background: #fff;
-            }
+
 
             a, a *{
                 -webkit-transition: all 100ms ease-out;
@@ -144,10 +157,13 @@ closedir($handle);
                 -ms-transition: all 100ms ease-out;
                 -o-transition: all 100ms ease-out;
                 transition: all 100ms ease-out;}
-            #siteList ul , .extWeb   ul    {list-style-type : none;}
+
+            nav ul     {list-style-type : none; padding: 0;margin: 0;}
             #siteList a         {text-decoration: none; font-size:1.5em; color : #666}
             #siteList a:hover   {text-decoration: none; color : #c68103}
             
+			#toolsList a{ text-decoration: none; color : #a85c00}
+			#toolsList a:hover{ color : orange}
             
             
             #headerSite{text-align : center}
@@ -158,6 +174,11 @@ closedir($handle);
             #footerSite{
                 text-align : right;
             }
+
+			.toolsBlock, .siteBlock{float: left; font-size : 1rem; margin: .5%;background: #fff;padding: .5em 1%;}
+
+			.toolsBlock{width: 24%;}
+			.siteBlock{width: 74%;}
         </style>
     </head>
     <body>
@@ -171,8 +192,8 @@ closedir($handle);
 
            
        </header>
-       
-        <article class="wrap">
+       <section class="wrap clearfix">
+         <article class="siteBlock">
            
            
             <h1>Projets Web</h1>
@@ -182,16 +203,20 @@ closedir($handle);
                 </ul> 
             </nav>
         </article>
-<!-- TRAVAUX FUTURS SUR PAGE D'ACCUEIL : Cadre d'utils serveur 
-       -PhPinfo()
-       -PhPMyAdmin        
-        <div class="wrap">
-            <h1>Outils</h1>
-            <ul>
-                <li><a href="">PhP Info</a></li>
-            </ul>
-        </div>
--->
+
+        <article class="toolsBlock">
+        	<h1>Outils</h1>
+        	<nav id="toolsList">
+        		<ul>
+        			<li><a href=""><i class="icon-info"></i>PhPInfo</a></li>
+        			<li><a href=""><i class="icon-database"></i>PhPMyAdmin</a></li>
+        			<!-- Image lamp <li><a href="">WebMin</a></li> -->
+        		</ul>
+        	</nav>
+        </article>
+       </section>
+
+
    <footer class='wrapT' id="footerSite">
                   <nav class="extWeb">
                <ul>
