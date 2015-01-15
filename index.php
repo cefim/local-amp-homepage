@@ -5,7 +5,7 @@
 $kingOfPop = "Erwann";
 
 //Quelle plateforme?
-$coolTool = "mac";//"mac" , "win" ou linux
+$coolTool = "mac";//"mac" , "win" ou "linux"
 
 
 // repertoires  gnorer dans les projets
@@ -24,15 +24,15 @@ if(isset($_GET["phpinfo"])){
 switch($coolTool){
 	case "win":
 		$initial = "W";
-		$phpMyAdmin = "";
+		$phpMyAdmin = "phpmyadmin/";
 		break;
 	case "mac":
 		$initial = "M";
-		$phpMyAdmin = "";
+		$phpMyAdminLink = "../phpmyadmin/";
 		break;
 	case 'linux':
 		$initial = "L";
-		$phpMyAdmin = "";
+		$phpMyAdminLink = "phpmyadmin/";
 		break;
 }
 
@@ -244,16 +244,7 @@ padding: .2em 1%;
         </article>
        </section>
 
-<!-- TRAVAUX FUTURS SUR PAGE D'ACCUEIL : Cadre d'utils serveur 
-       -PhPinfo()
-       -PhPMyAdmin        
-        <div class="wrap">
-            <h1>Outils</h1>
-            <ul>
-                <li><a href="">PhP Info</a></li>
-            </ul>
-        </div>
--->
+
    <footer class='wrapT' id="footerSite">
 	<a href="//cefim.eu" title="CEFIM">CEFIM</a>
 	-
