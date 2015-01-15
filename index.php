@@ -218,10 +218,7 @@ padding: .2em 1%;
            <br>
            Serveur <?= $initial ?>AMP Perso de <?= $kingOfPop ?>
            </h1>
-           
 
-
-           
        </header>
        <section class="wrap clearfix">
          <article>
